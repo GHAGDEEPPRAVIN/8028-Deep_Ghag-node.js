@@ -1,5 +1,5 @@
 import express from "express";
-import { addManagerDataAdmin, deleteManager, getAllManager, signin, signinAdmin, signinManager, signup, updateManagerDataAdmin } from "../controllers/adminControllers.js";
+import { addManagerDataAdmin, deleteManager, getAllManager, signinAdmin, signinManager, signup, updateManagerDataAdmin } from "../controllers/adminControllers.js";
 
 const adminRouter = express.Router();
 

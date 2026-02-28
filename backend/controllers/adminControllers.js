@@ -177,7 +177,7 @@ export const addManagerDataAdmin = async (req, res) => {
       status,
     });
 
-    res.json({ status: true, message: "Manger Sign up Successfully..." });
+    res.json({ status: true, message: "Manger added Successfully..." });
   } catch (error) {
     res.json({ status: false, message: error.message });
   }
@@ -188,10 +188,10 @@ export const addManagerDataAdmin = async (req, res) => {
 export const updateManagerDataAdmin = async (req, res) => {
   const { name, email, salary, designation, status } = req.body;
   try {
-    const token = res.cookie.auth_token;
-    let decoed = jwt.verify(token, "JwtProjects28/02/2026");
+    // const token = res.cookie.auth_token;
+    // let decoed = jwt.verify(token, "JwtProjects28/02/2026");
 
-    if (decoed.username == "Admin") {
+    // if (decoed.username == "Admin") {
       await managerModel.updateOne(
         { email },
         {
@@ -209,9 +209,9 @@ export const updateManagerDataAdmin = async (req, res) => {
         status: true,
         message: "Manager Infomation are Updated Successfully...",
       });
-    } else {
-      res.json({ status: false, message: "Unauthorized Admin !" });
-    }
+    // } else {
+    //   res.json({ status: false, message: "Unauthorized Admin !" });
+    // }
   } catch (error) {
     res.json({ status: false, message: error.message });
   }
