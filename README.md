@@ -1,1 +1,6 @@
-# 8028-Deep_Ghag-node.js
+# JWT Project
+
+Admin 
+- add manager
+- update manager
+- delete manager 
